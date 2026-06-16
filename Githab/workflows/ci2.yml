@@ -1,4 +1,4 @@
-name: Java CI
+name: Java CI with Tests
 
 on:
   push:
@@ -25,6 +25,6 @@ jobs:
         mkdir -p out
         javac -d out src/Lab2.java
 
-    - name: Run Main Application
+    - name: Run Main & Unit Tests
       run: |
         java -cp out Lab2
