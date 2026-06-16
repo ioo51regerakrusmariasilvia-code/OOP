@@ -13,7 +13,7 @@ public class Lab2 {
     }
 
     public static void runTests() {
-        System.out.println("=== ЗАПУСК ЮНІТ ТЕСТІВ ===");
+        System.out.println("ЗАПУСК ЮНІТ ТЕСТІВ");
         
         // Тест 1: Перевірка підрахунку слів у короткому реченні
         int test1 = countWords("Колупайте сю скалу");
