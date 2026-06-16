@@ -111,6 +111,6 @@ public class Lab3 {
         Car fakeTarget = new Car("Lada", "9", 1999, 120, 500);
         if (findCar(testArray, fakeTarget) != null) throw new RuntimeException("Тест 3 ФЕЙЛ: Знайдено машину, якої немає в масиві!");
 
-        System.out.println("УСІ ТЕСТИ ПРОЙДЕНО УСПІШНО! ✅");
+        System.out.println("УСІ ТЕСТИ ПРОЙДЕНО УСПІШНО!");
     }
 }
