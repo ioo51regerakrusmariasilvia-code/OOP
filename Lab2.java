@@ -1,22 +1,26 @@
 public class Lab2 {
     public static void main(String[] args) {
-        String text = "Вечірнє сонце, дякую за день. Вечірнє сонце, дякую за втому. " +
-                     "За тих лісів просвітлений едем. За те, що завтра вернемось додому.";
+        // Рядки Івана Франка з різною кількістю слів для наочного сортування
+        String text = "Колупайте сю скалу. Нехай ні жар, ні холод не спиняє вас. " +
+                      "Переносіть і труд, і спрагу, і голод, бо вам призначено скалу сесю розбить.";
 
         System.out.println("Оригінальний текст:");
         System.out.println(text);
         System.out.println("\nРезультат сортування:");
 
-        processText(text);}
+        processText(text);
+    }
 
     public static void processText(String text) {
         if (text == null) {
             System.out.println("Помилка: Текст не існує (null)!");
-            return;}
+            return;
+        }
         
         if (text.trim().isEmpty()) {
             System.out.println("Помилка: Рядок порожній!");
-            return;}
+            return;
+        }
 
         String[] sentences = text.split("\\.");
 
@@ -29,20 +33,23 @@ public class Lab2 {
                 if (count1 > count2) {
                     String temp = sentences[j];
                     sentences[j] = sentences[j + 1];
-                    sentences[j + 1] = temp;}
+                    sentences[j + 1] = temp;
+                }
             }
         }
 
         for (int i = 0; i < sentences.length; i++) {
             String trimmed = sentences[i].trim(); 
             if (!trimmed.isEmpty()) {
-                System.out.println("Слів: " + countWords(trimmed) + " -> " + trimmed + ".");}
+                System.out.println("Слів: " + countWords(trimmed) + " -> " + trimmed + ".");
+            }
         }
     }
 
     public static int countWords(String sentence) {
         if (sentence == null || sentence.trim().isEmpty()) {
-            return 0;}
+            return 0;
+        }
         String[] words = sentence.trim().split("\\s+");
         return words.length;
     }
