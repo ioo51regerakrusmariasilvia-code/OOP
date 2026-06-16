@@ -28,7 +28,7 @@ public class Lab2 {
         if (test3 != 0) {
             throw new AssertionError("Тест 3 провалено! Очікувалось 0 слів для пробілів.");}
 
-        System.out.println("✅ Усі юніт-тести успішно пройдено!");
+        System.out.println("Усі юніт-тести успішно пройдено!");
     }
 
 
